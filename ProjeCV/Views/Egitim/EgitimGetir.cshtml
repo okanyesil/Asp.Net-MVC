@@ -1,0 +1,31 @@
+﻿@model ProjeCV.Models.Entity.tbl_egitim
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Egitim Güncelle</h2>
+@using (Html.BeginForm("Guncelle", "Egitim", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.ID, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.BASLIK, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.BASLIK, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.ALT_BASLIK, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ALT_BASLIK, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.ACIKLAMA, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ACIKLAMA, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.TARIH, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.TARIH, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.GNOT, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.GNOT, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</div>
+}

@@ -1,0 +1,35 @@
+﻿@model ProjeCV.Models.Sinif.Class1
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>BASLIK</th>
+            <th>ALT BAŞLIK</th>
+            <th>ACIKLAMA</th>
+            <th>GNOT</th>
+            <th>TARİH</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var egitim in Model.Egitim)
+        {
+            <tr>
+                <td>@egitim.ID</td>
+                <td>@egitim.BASLIK</td>
+                <td>@egitim.ALT_BASLIK</td>
+                <td>@egitim.ACIKLAMA</td>
+                <td>@egitim.GNOT</td>
+                <td>@egitim.TARIH</td>
+                <td><a href="/Egitim/EgitimSil/@egitim.ID" class="btn btn-danger">Sil</a>
+                <a href="/Egitim/EgitimGetir/@egitim.ID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Egitim/YeniEgitimEkle/" class="btn btn-info">Yeni Eğitim Ekle</a>

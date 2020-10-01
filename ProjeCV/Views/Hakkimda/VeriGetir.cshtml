@@ -1,0 +1,38 @@
+﻿@model ProjeCV.Models.Entity.tbl_hakkimda
+@{
+    ViewBag.Title = "VeriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Hakkımda Güncelle</h2>
+
+@using (Html.BeginForm("Guncelle", "Hakkimda", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.ID, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.AD, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.AD, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.SOYAD, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.SOYAD, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.ADRESS, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ADRESS, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.MAIL, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.MAIL, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.TELEFON, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.TELEFON, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.KISANOT, new { @class = "form-control" })
+    @Html.TextAreaFor(m => m.KISANOT, new { @class = "form-control"  })
+    <br />
+    @Html.LabelFor(m => m.FOTOGRAF, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.FOTOGRAF, new { @class = "form-control" })
+
+    <button class="btn btn-primary">Güncelle</button>
+</div>
+}

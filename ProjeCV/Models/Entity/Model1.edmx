@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="blogWebDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_deneyim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BASLIK" Type="varchar" MaxLength="50" />
+          <Property Name="ALT_BASLIK" Type="varchar" MaxLength="50" />
+          <Property Name="ACIKLAMA" Type="varchar(max)" />
+          <Property Name="TARIH" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_egitim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BASLIK" Type="varchar" MaxLength="50" />
+          <Property Name="ALT_BASLIK" Type="varchar" MaxLength="50" />
+          <Property Name="ACIKLAMA" Type="varchar" MaxLength="250" />
+          <Property Name="GNOT" Type="varchar" MaxLength="10" />
+          <Property Name="TARIH" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_hakkimda">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AD" Type="varchar" MaxLength="30" />
+          <Property Name="SOYAD" Type="varchar" MaxLength="50" />
+          <Property Name="ADRESS" Type="varchar" MaxLength="150" />
+          <Property Name="MAIL" Type="varchar" MaxLength="50" />
+          <Property Name="TELEFON" Type="varchar" MaxLength="20" />
+          <Property Name="KISANOT" Type="varchar(max)" />
+          <Property Name="FOTOGRAF" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbl_hobiler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HOBI" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbl_oduller">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ODULLER" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_yetenekler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YETENEK" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="blogWebDbModelStoreContainer">
+          <EntitySet Name="tbl_deneyim" EntityType="Self.tbl_deneyim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_egitim" EntityType="Self.tbl_egitim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_hakkimda" EntityType="Self.tbl_hakkimda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_hobiler" EntityType="Self.tbl_hobiler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_oduller" EntityType="Self.tbl_oduller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_yetenekler" EntityType="Self.tbl_yetenekler" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="blogWebDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_deneyim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BASLIK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ALT_BASLIK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_egitim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BASLIK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ALT_BASLIK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="GNOT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_hakkimda">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADRESS" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFON" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="KISANOT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FOTOGRAF" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_hobiler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HOBI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_oduller">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ODULLER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_yetenekler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YETENEK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="blogWebDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_deneyim" EntityType="Self.tbl_deneyim" />
+          <EntitySet Name="tbl_egitim" EntityType="Self.tbl_egitim" />
+          <EntitySet Name="tbl_hakkimda" EntityType="Self.tbl_hakkimda" />
+          <EntitySet Name="tbl_hobiler" EntityType="Self.tbl_hobiler" />
+          <EntitySet Name="tbl_oduller" EntityType="Self.tbl_oduller" />
+          <EntitySet Name="tbl_yetenekler" EntityType="Self.tbl_yetenekler" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="blogWebDbModelStoreContainer" CdmEntityContainer="blogWebDbEntities">
+          <EntitySetMapping Name="tbl_deneyim">
+            <EntityTypeMapping TypeName="blogWebDbModel.tbl_deneyim">
+              <MappingFragment StoreEntitySet="tbl_deneyim">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BASLIK" ColumnName="BASLIK" />
+                <ScalarProperty Name="ALT_BASLIK" ColumnName="ALT_BASLIK" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_egitim">
+            <EntityTypeMapping TypeName="blogWebDbModel.tbl_egitim">
+              <MappingFragment StoreEntitySet="tbl_egitim">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BASLIK" ColumnName="BASLIK" />
+                <ScalarProperty Name="ALT_BASLIK" ColumnName="ALT_BASLIK" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="GNOT" ColumnName="GNOT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_hakkimda">
+            <EntityTypeMapping TypeName="blogWebDbModel.tbl_hakkimda">
+              <MappingFragment StoreEntitySet="tbl_hakkimda">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AD" ColumnName="AD" />
+                <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+                <ScalarProperty Name="ADRESS" ColumnName="ADRESS" />
+                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+                <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+                <ScalarProperty Name="KISANOT" ColumnName="KISANOT" />
+                <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_hobiler">
+            <EntityTypeMapping TypeName="blogWebDbModel.tbl_hobiler">
+              <MappingFragment StoreEntitySet="tbl_hobiler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HOBI" ColumnName="HOBI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_oduller">
+            <EntityTypeMapping TypeName="blogWebDbModel.tbl_oduller">
+              <MappingFragment StoreEntitySet="tbl_oduller">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ODULLER" ColumnName="ODULLER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_yetenekler">
+            <EntityTypeMapping TypeName="blogWebDbModel.tbl_yetenekler">
+              <MappingFragment StoreEntitySet="tbl_yetenekler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="YETENEK" ColumnName="YETENEK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,37 @@
+﻿@model ProjeCV.Models.Entity.tbl_deneyim
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Deneyim Güncelle</h2>
+@using (Html.BeginForm("Guncelle", "Deneyim", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ID, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.BASLIK, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.BASLIK, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.ALT_BASLIK, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.ALT_BASLIK, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.ACIKLAMA, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.ACIKLAMA, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.TARIH, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.TARIH, new { @class = "form-control" })
+    </div>
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+}
+

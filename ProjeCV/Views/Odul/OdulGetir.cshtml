@@ -1,0 +1,20 @@
+﻿@model ProjeCV.Models.Entity.tbl_oduller
+@{
+    ViewBag.Title = "OdulGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Odul Güncelle</h2>
+@using (Html.BeginForm("Guncelle", "Odul", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.ID, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.ODULLER, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ODULLER, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</div>
+}
+

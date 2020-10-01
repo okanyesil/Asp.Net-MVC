@@ -1,0 +1,20 @@
+﻿@model ProjeCV.Models.Entity.tbl_yetenekler
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Yetenek Guncelle</h2>
+
+@using (Html.BeginForm("Guncelle", "Yetenek", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.ID, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.YETENEK, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.YETENEK, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</div>
+}

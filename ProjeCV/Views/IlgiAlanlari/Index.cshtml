@@ -1,0 +1,28 @@
+﻿@model ProjeCV.Models.Sinif.Class1
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Hobi</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var ilgiA in Model.Hobiler)
+        {
+            <tr>
+                <td>@ilgiA.ID</td>
+                <td>@ilgiA.HOBI</td>
+                <td><a href="/IlgiAlanlari/IlgiSil/@ilgiA.ID" onclick="return confirm('Silmek istiyor musunuz')" class="btn btn-danger">Sil</a>
+                <a href="/IlgiAlanlari/IlgiGetir/@ilgiA.ID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/IlgiAlanlari/YeniILgiAlani/" class="btn btn-primary">İlgi alani ekle</a>
+
